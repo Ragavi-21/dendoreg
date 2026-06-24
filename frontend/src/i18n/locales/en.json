@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "brand": "dendo",
+    "joinUs": "Join Us",
+    "becomeRider": "Become a Rider",
+    "registerShop": "Register your Shop",
+    "support": "Support",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "title": "India's Local Businesses. One Powerful Platform.",
+    "subheading": "Join Dendo as a Vendor or Delivery Partner and become part of a growing network that connects local businesses, delivery professionals, and customers across India.",
+    "ctaLabel": "Register Now",
+    "secondaryCta": "See how it works"
+  },
+  "stats": {
+    "vendors": "Active Vendors",
+    "riders": "Delivery Partners",
+    "cities": "Cities Served",
+    "orders": "Orders Delivered"
+  },
+  "about": {
+    "eyebrow": "About Dendo",
+    "title": "Empowering Every Neighborhood Business",
+    "paragraph1": "Dendo is India's hyperlocal delivery platform built to help local restaurants, grocery stores, pharmacies, and retail shops grow digitally. We connect businesses with customers through fast, reliable, and technology-driven delivery solutions.",
+    "paragraph2": "Our goal is simple: help local businesses increase sales, help delivery partners earn more, and make everyday shopping easier for customers.",
+    "point1": "Fast onboarding with zero setup fees",
+    "point2": "Real-time order and delivery tracking",
+    "point3": "Dedicated partner support team"
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Everything You Need, Delivered Locally",
+    "intro": "Dendo offers a complete hyperlocal delivery ecosystem designed to connect customers with local businesses and essential services in their city.",
+    "food": {
+      "title": "Food Delivery",
+      "description": "Order from your favorite restaurants and enjoy fast, reliable delivery right to your doorstep."
+    },
+    "grocery": {
+      "title": "Grocery Delivery",
+      "description": "Get fresh fruits, vegetables, daily essentials, and household products delivered conveniently from nearby stores."
+    },
+    "ecommerce": {
+      "title": "E-Commerce Delivery",
+      "description": "Shop from local businesses and online sellers with seamless last-mile delivery powered by Dendo."
+    },
+    "parcel": {
+      "title": "Parcel Delivery",
+      "description": "Send documents, packages, gifts, and important items quickly and securely within your city."
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "How It Works",
+    "title": "Getting Started Is Simple",
+    "intro": "Three easy steps to get food, groceries, and essentials delivered to your door.",
+    "step1": {
+      "title": "Browse",
+      "description": "Explore nearby restaurants and stores on the Dendo app and pick what you need."
+    },
+    "step2": {
+      "title": "Order",
+      "description": "Place your order in a few taps and pay securely through the app."
+    },
+    "step3": {
+      "title": "Delivered",
+      "description": "Track your order in real time as a Dendo partner brings it straight to your door."
+    }
+  },
+  "joinUs": {
+    "eyebrow": "Join Us",
+    "title": "Become Part of the Dendo Family",
+    "intro": "Whether you want to deliver on your own schedule or grow your shop online, Dendo gives you the tools to get started today.",
+    "rider": {
+      "title": "Become a Dendo Rider",
+      "description": "Deliver orders on your own schedule and earn through daily and weekly bonuses, with no uniform required.",
+      "cta": "Start rider registration"
+    },
+    "vendor": {
+      "title": "Register your Shop on Dendo",
+      "description": "List your restaurant or shop on Dendo with free registration, no commission charges, and free menu listing.",
+      "cta": "Start shop registration"
+    }
+  },
+  "footer": {
+    "tagline1": "Connecting food, people, and businesses.",
+    "tagline2": "Delivering convenience to your doorstep.",
+    "companyHeading": "Company",
+    "getAppHeading": "Get the App",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "deliveryAreas": "Delivery Areas",
+      "contact": "Contact Us",
+      "about": "About Us",
+      "joinUs": "Join Us"
+    },
+    "copyright": "© {{year}} Dendo. All rights reserved."
+  },
+  "apps": {
+    "user": {
+      "name": "Dendo User App",
+      "description": "Browse restaurants, order food, track deliveries, and enjoy a seamless food ordering experience."
+    },
+    "vendor": {
+      "name": "Dendo Vendor App",
+      "description": "Manage menus, receive orders, monitor sales, and grow your restaurant business."
+    },
+    "rider": {
+      "name": "Dendo Rider App",
+      "description": "Accept delivery requests, manage deliveries, and track earnings."
+    },
+    "android": "Android",
+    "ios": "iOS"
+  },
+  "registerChoice": {
+    "title": "How would you like to partner with Dendo?",
+    "subtitle": "Choose an option below to start your registration.",
+    "rider": {
+      "title": "Become a Dendo Rider",
+      "description": "Deliver orders on your own schedule and earn through daily and weekly bonuses, with no uniform required.",
+      "cta": "Start rider registration"
+    },
+    "vendor": {
+      "title": "Register your Shop on Dendo",
+      "description": "List your restaurant or shop on Dendo with free registration, no commission charges, and free menu listing.",
+      "cta": "Start shop registration"
+    }
+  },
+  "registerHeader": {
+    "subLabelPartner": "partner programs",
+    "subLabelRider": "rider onboarding",
+    "subLabelVendor": "vendor onboarding",
+    "helpText": "Need help? Email support@dendo.store",
+    "languageLabel": "Language",
+    "backToHome": "Back to home"
+  },
+  "intro": {
+    "paragraph1": "Dendo is an emerging food delivery startup focused on connecting customers, restaurants, and delivery partners through a simple, reliable, and technology-driven platform. Our goal is to support local businesses, create earning opportunities for riders, and provide customers with a fast and convenient food ordering experience.",
+    "paragraph2": "Through the Dendo ecosystem, users can discover restaurants, place orders, and track deliveries in real time. Vendors can efficiently manage their menus, orders, and business operations, while riders can earn by delivering orders through the Dendo Rider App.",
+    "paragraph3": "Dendo is committed to building a strong local delivery network and delivering quality service to customers while helping businesses grow in the digital marketplace.",
+    "applicationsHeading": "Applications",
+    "appLinksHeading": "Dendo Applications",
+    "websiteLabel": "Website:",
+    "closingThanks": "Thank you for your interest in joining Dendo. Together, we are building the future of local food delivery."
+  },
+  "form": {
+    "firstName": "First Name",
+    "firstNameHint": "As per your ID proof",
+    "lastName": "Last Name",
+    "mobileNumber": "Mobile Number",
+    "mobileHint": "We will contact you on this number",
+    "email": "Email Address",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "fullAddress": "Full Address",
+    "vehicleTypeLabel": "Select Vehicle Type",
+    "idProofTypeLabel": "Identity Proof Type",
+    "vehicleTypes": {
+      "twoWheeler": "2 Wheeler",
+      "threeWheeler": "3 Wheeler",
+      "fourWheeler": "4 Wheeler",
+      "evScooter": "EV Scooter",
+      "tataAce": "TATA ACE",
+      "threeWheelerAce": "3 Wheeler Ace",
+      "pickup8ft": "Pick Up 8ft",
+      "tata407": "Tata 407"
+    },
+    "idProofTypes": {
+      "aadhaar": "Aadhaar Card",
+      "pan": "PAN Card",
+      "voterId": "Voter ID",
+      "passport": "Passport"
+    },
+    "stateLabel": "State",
+    "cityLabel": "City",
+    "states": {
+      "tamilNadu": "Tamil Nadu",
+      "karnataka": "Karnataka"
+    },
+    "cities": {
+      "bengaluru": "Bengaluru",
+      "coimbatore": "Coimbatore",
+      "dharmapuri": "Dharmapuri",
+      "ooty": "Ooty",
+      "mettur": "Mettur",
+      "sathyamangalam": "Sathyamangalam",
+      "erode": "Erode"
+    },
+    "requiredNote": "* Indicates required question",
+    "next": "Next",
+    "back": "Back",
+    "stepOf": "Step {{current}} of {{total}}",
+    "submit": "Submit Application",
+    "submitting": "Submitting...",
+    "submitError": "Something went wrong. Please try again."
+  },
+  "riderForm": {
+    "pageTitle": "Dendo Rider Registration Form",
+    "welcomeHeading": "Welcome to Dendo Rider Onboarding.",
+    "closingInstruction": "Please fill in all required details and upload the necessary documents. Our team will verify your information and contact you regarding approval.",
+    "features": {
+      "free": "Free Registration",
+      "dailyBonus": "Daily Bonus Opportunities",
+      "weeklyBonus": "Weekly Bonus Rewards",
+      "noUniform": "No Uniform Fees",
+      "flexibleHours": "Flexible Working Hours",
+      "petrolAllowance": "Petrol Allowance"
+    },
+    "step1": { "title": "Personal Details", "description": "Tell us a bit about yourself." },
+    "step2": { "title": "Address & Location", "description": "Where should we send delivery requests?" },
+    "step3": { "title": "Vehicle & Documents", "description": "Your vehicle and identity verification." },
+    "profilePictureLabel": "Upload Profile Picture",
+    "profilePictureHint": "A clear photo of your face, used for your rider profile",
+    "drivingLicenseNumberLabel": "Driving License Number",
+    "uploadIdProofLabel": "Upload Identity Proof",
+    "uploadLicenseLabel": "Upload Driving License",
+    "successTitle": "Application received",
+    "successBody": "Thanks, {{name}}! Our team will verify your information and contact you regarding approval.",
+    "successNote": "You'll hear back from our onboarding team within 24-48 hours."
+  },
+  "vendorForm": {
+    "pageTitle": "Dendo Vendor / Shop Registration Form",
+    "welcomeHeading": "Welcome to Dendo Vendor Onboarding.",
+    "closingInstruction": "Please complete this registration form and upload the required documents. Our team will review your application and contact you within 24-48 hours.",
+    "features": {
+      "free": "Free Registration",
+      "noCommission": "No Commission Charges",
+      "freeMenu": "Free Menu Listing"
+    },
+    "step1": { "title": "Shop & Owner Details", "description": "Tell us about your shop and who runs it." },
+    "step2": { "title": "Address & Location", "description": "Where customers and riders will find you." },
+    "step3": { "title": "Hours & Menu", "description": "Set your timings and share your menu." },
+    "step4": { "title": "Compliance", "description": "GST and FSSAI verification details." },
+    "shopNameLabel": "Shop Name",
+    "ownerNameLabel": "Owner Name",
+    "ownerMobileLabel": "Mobile Number (Owner)",
+    "shopMobileLabel": "Shop Mobile Number",
+    "shopLogoLabel": "Upload Shop Logo",
+    "shopBannerLabel": "Upload Shop Banner Image",
+    "shopAddressLabel": "Shop Address",
+    "deliveryTimeLabel": "Delivery Time",
+    "deliveryTimePlaceholder": "e.g. 30-45 mins",
+    "menuUploadLabel": "Upload Food Menu",
+    "openingTimeLabel": "Shop Opening Time",
+    "closingTimeLabel": "Shop Closing Time",
+    "gstLabel": "GST Registration",
+    "yes": "Yes",
+    "no": "No",
+    "gstCertificateLabel": "Upload GST Certificate",
+    "fssaiNumberLabel": "FSSAI License Number",
+    "fssaiExpiryLabel": "FSSAI License Expiry Date",
+    "fssaiCertificateLabel": "Upload FSSAI Certificate",
+    "successTitle": "Application received",
+    "successBody": "Thanks, {{name}}! Our team will review your application and contact you within 24-48 hours.",
+    "successNote": "You'll hear back from our onboarding team within 24-48 hours."
+  },
+  "map": {
+    "label": "Pin Your Exact Location",
+    "searchPlaceholder": "Search for your address",
+    "searchButton": "Search",
+    "searching": "Searching...",
+    "noResults": "No results found",
+    "useMyLocation": "Use my current location",
+    "locating": "Locating...",
+    "dragHint": "Drag the pin or click on the map to set your exact location",
+    "selectedAddressLabel": "Selected location",
+    "useThisAddress": "Use this address",
+    "openInGoogleMaps": "Open in Google Maps",
+    "permissionDenied": "Location permission denied. Please search or drag the pin instead.",
+    "locateError": "Couldn't fetch your location. Please try again or set it manually.",
+    "noLocation": "No location selected yet"
+  }
+}

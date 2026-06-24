@@ -1,0 +1,102 @@
+.register-choice {
+  min-height: 100svh;
+  background: var(--code-bg);
+  text-align: left;
+}
+
+.register-choice-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.register-choice-body h1 {
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.register-choice-body > p {
+  color: var(--text);
+  margin: 0 0 40px;
+}
+
+.register-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.register-choice-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.register-choice-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+}
+
+.register-choice-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  margin-bottom: 8px;
+}
+
+.register-choice-icon svg {
+  width: 26px;
+  height: 26px;
+  color: var(--accent);
+}
+
+.register-choice-card h2 {
+  font-size: 19px;
+  margin: 0;
+  color: var(--text-h);
+}
+
+.register-choice-card p {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  line-height: 150%;
+}
+
+.register-choice-cta {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.register-choice-cta svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 720px) {
+  .register-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-choice-body {
+    padding: 40px 20px;
+  }
+}

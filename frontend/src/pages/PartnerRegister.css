@@ -1,0 +1,9 @@
+.partner-register,
+.partner-register * {
+  box-sizing: border-box;
+}
+
+.partner-register {
+  text-align: left;
+  overflow-x: clip;
+}

@@ -1,0 +1,190 @@
+.registration-intro {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.registration-intro h1 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.registration-intro h2 {
+  font-size: 17px;
+  margin: 12px 0 0;
+}
+
+.registration-intro p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 160%;
+  margin: 0;
+}
+
+.intro-welcome {
+  color: var(--text-h);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.intro-apps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.intro-apps li {
+  display: flex;
+  gap: 12px;
+}
+
+.intro-app-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  flex-shrink: 0;
+}
+
+.intro-app-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+}
+
+.intro-heading-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.intro-heading-with-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+}
+
+.intro-apps strong {
+  display: block;
+  color: var(--text-h);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.intro-apps p {
+  font-size: 13px;
+}
+
+.intro-app-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-app-links li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.intro-app-links strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.intro-app-links strong svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.app-link-row {
+  display: flex;
+  gap: 14px;
+}
+
+.app-link-row a,
+.intro-website a {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.app-link-row a:hover,
+.intro-website a:hover {
+  text-decoration: underline;
+}
+
+.intro-website {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.intro-website svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.intro-features {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.intro-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.intro-features svg {
+  width: 18px;
+  height: 18px;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.intro-closing {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .registration-intro {
+    padding: 22px;
+  }
+}

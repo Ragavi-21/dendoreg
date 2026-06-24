@@ -1,0 +1,22 @@
+.wizard-step {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.wizard-step-heading h2 {
+  font-size: 21px;
+  margin: 0 0 4px;
+}
+
+.wizard-step-heading p {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0;
+}
+
+.wizard-step-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}

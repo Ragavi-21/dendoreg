@@ -1,0 +1,83 @@
+.about-section {
+  padding: 96px 32px;
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.about-copy h2 {
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+
+.about-paragraph {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 170%;
+  margin: 0 0 16px;
+}
+
+.about-points {
+  list-style: none;
+  margin: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: var(--surface-tint);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.about-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.about-points svg {
+  width: 22px;
+  height: 22px;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .about-points {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 56px 20px;
+  }
+
+  .about-copy h2 {
+    font-size: 24px;
+  }
+}

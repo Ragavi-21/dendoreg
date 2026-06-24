@@ -1,0 +1,82 @@
+.file-drop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.file-drop:hover {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.file-drop svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.file-error {
+  margin: 0;
+  font-size: 13px;
+  color: #d33;
+}
+
+.file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.file-list svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.file-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-h);
+}
+
+.file-list small {
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.file-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 2px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.file-list button:hover {
+  color: #d33;
+}

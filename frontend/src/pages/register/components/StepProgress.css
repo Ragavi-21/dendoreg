@@ -1,0 +1,87 @@
+.step-progress {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.step-progress-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.step-progress-item::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.step-progress-item:first-child::before {
+  display: none;
+}
+
+.step-progress-item.is-completed::before {
+  background: var(--accent);
+}
+
+.step-progress-marker {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: default;
+}
+
+.step-progress-item.is-current .step-progress-marker {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.step-progress-item.is-completed .step-progress-marker {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.step-progress-marker svg {
+  width: 16px;
+  height: 16px;
+}
+
+.step-progress-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  max-width: 110px;
+}
+
+.step-progress-item.is-current .step-progress-title {
+  color: var(--text-h);
+}
+
+@media (max-width: 560px) {
+  .step-progress-title {
+    display: none;
+  }
+}

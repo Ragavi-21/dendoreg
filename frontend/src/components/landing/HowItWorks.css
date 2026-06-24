@@ -1,0 +1,97 @@
+.how-it-works-section {
+  padding: 96px 32px;
+}
+
+.how-it-works-heading {
+  max-width: 680px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.how-it-works-eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.how-it-works-heading h2 {
+  font-size: 30px;
+  margin: 0 0 14px;
+}
+
+.how-it-works-intro {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.how-it-works-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.how-it-works-card {
+  position: relative;
+  text-align: center;
+  padding: 32px 20px 24px;
+}
+
+.how-it-works-index {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--border);
+  font-family: var(--heading);
+  line-height: 1;
+}
+
+.how-it-works-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-bottom: 18px;
+}
+
+.how-it-works-icon svg {
+  width: 26px;
+  height: 26px;
+  color: #fff;
+}
+
+.how-it-works-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.how-it-works-card p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 155%;
+  margin: 0 auto;
+  max-width: 260px;
+}
+
+@media (max-width: 760px) {
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-it-works-section {
+    padding: 56px 20px;
+  }
+}

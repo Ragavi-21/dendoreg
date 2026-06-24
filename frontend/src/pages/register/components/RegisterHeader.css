@@ -1,0 +1,73 @@
+.register-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.register-brand-logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: var(--accent);
+}
+
+.register-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.register-brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.register-brand-sub {
+  font-size: 10px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.register-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.register-help {
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-help:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .register-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .register-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
