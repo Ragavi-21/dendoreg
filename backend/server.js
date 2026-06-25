@@ -193,6 +193,19 @@ Object.entries(ADMIN_ROUTES).forEach(([route, table]) => {
   });
 });
 
+// ── Serve the built frontend (same origin as the API) ────────────────────────
+// In production the frontend's relative fetch('/api/...') calls (see
+// dendoreg/frontend/src/api/registrations.js) only work if the frontend and
+// backend share an origin — Vite's dev proxy (vite.config.js) doesn't exist
+// once you `vite build`. Serving the built dist/ from this same Express
+// process means dendoregister.in can host both with no separate API domain
+// or CORS configuration needed.
+const frontendDist = path.join(__dirname, '../frontend/dist');
+app.use(express.static(frontendDist));
+app.get(/^(?!\/api|\/uploads).*/, (_req, res) => {
+  res.sendFile(path.join(frontendDist, 'index.html'));
+});
+
 // ── Start ─────────────────────────────────────────────────────────────────────
 async function startServer() {
   try {
