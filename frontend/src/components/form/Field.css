@@ -41,12 +41,46 @@
 .field select {
   width: 100%;
   padding: 13px 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--field-border-light);
   border-radius: 12px;
   font-size: 15px;
   font-family: inherit;
   color: var(--text-h);
   background: var(--bg);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input[type='text']::placeholder,
+.field input[type='email']::placeholder,
+.field input[type='tel']::placeholder,
+.field input[type='url']::placeholder,
+.field textarea::placeholder {
+  color: var(--text);
+  opacity: 0.55;
+}
+
+.field input[type='text']:hover,
+.field input[type='email']:hover,
+.field input[type='tel']:hover,
+.field input[type='url']:hover,
+.field input[type='time']:hover,
+.field input[type='date']:hover,
+.field textarea:hover,
+.field select:hover {
+  border-color: var(--field-border-dark);
+}
+
+.field input[type='text']:focus,
+.field input[type='email']:focus,
+.field input[type='tel']:focus,
+.field input[type='url']:focus,
+.field input[type='time']:focus,
+.field input[type='date']:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
 .field textarea {
@@ -92,8 +126,19 @@
 .radio-option-other input[type='text'] {
   flex: 1;
   padding: 8px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--field-border-light);
   border-radius: 8px;
   font-size: 14px;
   font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.radio-option-other input[type='text']:hover {
+  border-color: var(--field-border-dark);
+}
+
+.radio-option-other input[type='text']:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
