@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { trackEvent } from '../../utils/fbPixel.js'
 import { useTranslation } from 'react-i18next'
 import RegisterHeader from './components/RegisterHeader.jsx'
 import RegistrationIntro from './components/RegistrationIntro.jsx'
@@ -13,8 +14,32 @@ import { submitVendorRegistration } from '../../api/registrations.js'
 import './RegistrationPage.css'
 
 const FEATURE_KEYS = ['free', 'noCommission', 'freeMenu']
-const STATE_KEYS = ['tamilNadu', 'karnataka']
-const CITY_KEYS = ['bengaluru', 'coimbatore', 'dharmapuri', 'ooty', 'mettur', 'sathyamangalam', 'erode']
+const DISTRICTS = ['bengaluru', 'coimbatore', 'dharmapuri']
+const DISTRICT_AREAS = {
+  bengaluru: [
+    'whitefield', 'electronic_city', 'koramangala', 'indiranagar', 'hsr_layout',
+    'jayanagar', 'jp_nagar', 'banashankari', 'btm_layout', 'marathahalli',
+    'bellandur', 'yelahanka', 'hebbal', 'yeshwanthpur', 'rajajinagar',
+    'malleshwaram', 'basavanagudi', 'kengeri', 'vijayanagar', 'kr_puram',
+    'mahadevapura', 'hennur', 'sarjapur_road', 'banaswadi', 'rt_nagar',
+    'nagawara', 'domlur', 'richmond_town', 'shivajinagar', 'mg_road',
+    'frazer_town'
+  ],
+  coimbatore: [
+    'gandhipuram', 'r_s__puram', 'saibaba_colony', 'race_course', 'peelamedu',
+    'singanallur', 'saravanampatti', 'ganapathy', 'kalapatti', 'vilankurichi',
+    'thudiyalur', 'vadavalli', 'ramanathapuram', 'ukkadam', 'podanur',
+    'sundarapuram', 'kuniyamuthur', 'kovaipudur', 'selvapuram', 'town_hall',
+    'tatabad', 'chinniampalayam', 'neelambur', 'irugur', 'sulur',
+    'madukkarai', 'perur', 'mettupalayam', 'annur', 'pollachi'
+  ],
+  dharmapuri: [
+    'dharmapuri_town', 'nallampalli', 'karimangalam', 'palacode', 'pennagaram',
+    'harur', 'pappireddipatti', 'morappur', 'bommidi', 'thoppur',
+    'hogenakkal', 'a__jettihalli', 'adhiyamankottai', 'kadagathur', 'papparapatti',
+    'indur', 'marandahalli', 'kambainallur'
+  ]
+}
 
 const INITIAL_STATE = {
   shopName: '',
@@ -50,9 +75,22 @@ function VendorRegistration() {
     setForm((prev) => ({ ...prev, [field]: value }))
   }
 
+  const getDistrictKey = (translatedValue) => {
+    if (!translatedValue) return ''
+    for (const key of DISTRICTS) {
+      if (t(`form.cities.${key}`) === translatedValue) {
+        return key
+      }
+    }
+    return ''
+  }
+
   const features = FEATURE_KEYS.map((key) => t(`vendorForm.features.${key}`))
-  const states = STATE_KEYS.map((key) => t(`form.states.${key}`))
-  const cities = CITY_KEYS.map((key) => t(`form.cities.${key}`))
+  const districts = DISTRICTS.map((key) => t(`form.cities.${key}`))
+  const currentDistrictKey = getDistrictKey(form.state)
+  const areas = currentDistrictKey
+    ? DISTRICT_AREAS[currentDistrictKey].map((key) => t(`form.areas.${key}`))
+    : []
 
   const step1Valid = Boolean(form.shopName.trim() && form.ownerName.trim() && form.ownerMobile.trim().length >= 10)
   const step2Valid = Boolean(
@@ -92,6 +130,7 @@ function VendorRegistration() {
     setSubmitError('')
     try {
       await submitVendorRegistration(form)
+      trackEvent('Lead', { content_name: 'Vendor Registration' })
       setSubmitted(true)
     } catch (error) {
       setSubmitError(error.message || t('form.submitError'))
@@ -176,14 +215,16 @@ function VendorRegistration() {
                   <SelectField
                     label={t('form.stateLabel')}
                     required
-                    options={states}
+                    options={districts}
                     value={form.state}
-                    onChange={(value) => set('state', value)}
+                    onChange={(value) => {
+                      setForm((prev) => ({ ...prev, state: value, city: '' }))
+                    }}
                   />
                   <SelectField
                     label={t('form.cityLabel')}
                     required
-                    options={cities}
+                    options={areas}
                     value={form.city}
                     onChange={(value) => set('city', value)}
                   />
