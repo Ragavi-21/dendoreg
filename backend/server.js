@@ -226,7 +226,7 @@ app.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
     let message = 'File upload error.';
     if (err.code === 'LIMIT_FILE_SIZE') {
-      message = `File is too large. Maximum allowed size is 10 MB.`;
+      message = `File is too large. Maximum allowed size is 1 MB.`;
     } else if (err.code === 'LIMIT_FILE_COUNT') {
       message = 'Too many files uploaded.';
     } else if (err.code === 'LIMIT_UNEXPECTED_FILE') {
