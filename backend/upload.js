@@ -28,3 +28,4 @@ export const uploadVendorFiles = createUploader('vendors');
 export function filePath(file) {
   return file ? `uploads/${path.basename(path.dirname(file.path))}/${file.filename}` : null;
 }
+
