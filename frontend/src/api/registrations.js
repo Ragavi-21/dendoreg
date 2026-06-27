@@ -1,8 +1,23 @@
 async function submitFormData(endpoint, formData) {
-  const response = await fetch(endpoint, { method: 'POST', body: formData })
+  let response
+  try {
+    response = await fetch(endpoint, { method: 'POST', body: formData })
+  } catch {
+    // Network error — server unreachable or no internet
+    throw new Error('Cannot reach the server. Please check your internet connection and try again.')
+  }
+
+  // Try to parse JSON — nginx/proxy errors return HTML so this may be null
   const data = await response.json().catch(() => null)
 
   if (!response.ok) {
+    // Give a specific, helpful message for each common status code
+    if (response.status === 413) {
+      throw new Error('File too large. Please upload files smaller than 10 MB each.')
+    }
+    if (response.status === 502 || response.status === 503 || response.status === 504) {
+      throw new Error('Server is temporarily unavailable. Please try again in a moment.')
+    }
     throw new Error(data?.message || 'Something went wrong. Please try again.')
   }
 

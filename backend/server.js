@@ -128,16 +128,29 @@ app.post(
     const gstCertificate   = req.files?.gstCertificate   || [];
     const fssaiCertificate = req.files?.fssaiCertificate?.[0];
 
-    if (
-      !shopName || !ownerName || !ownerMobile ||
-      !state || !city || !shopAddress || !latitude || !longitude ||
-      !deliveryTime || !openingTime || !closingTime ||
-      !fssaiNumber || !fssaiExpiryDate ||
-      menuFiles.length === 0 || !fssaiCertificate
-    ) {
+    // Log every field so we can diagnose exactly which one is missing
+    const missing = [];
+    if (!shopName)          missing.push('shopName');
+    if (!ownerName)         missing.push('ownerName');
+    if (!ownerMobile)       missing.push('ownerMobile');
+    if (!state)             missing.push('state');
+    if (!city)              missing.push('city');
+    if (!shopAddress)       missing.push('shopAddress');
+    if (!latitude)          missing.push('latitude');
+    if (!longitude)         missing.push('longitude');
+    if (!deliveryTime)      missing.push('deliveryTime');
+    if (!openingTime)       missing.push('openingTime');
+    if (!closingTime)       missing.push('closingTime');
+    if (!fssaiNumber)       missing.push('fssaiNumber');
+    if (!fssaiExpiryDate)   missing.push('fssaiExpiryDate');
+    if (menuFiles.length === 0) missing.push('menuFiles');
+    if (!fssaiCertificate)  missing.push('fssaiCertificate');
+
+    if (missing.length > 0) {
+      console.warn('⚠️ vendor-registrations: missing fields →', missing.join(', '));
       return res.status(400).json({
         success: false,
-        message: 'Please fill in all required fields and upload the required documents.',
+        message: `Missing required fields: ${missing.join(', ')}. Please go back and complete all steps.`,
       });
     }
 
