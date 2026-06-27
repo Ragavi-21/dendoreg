@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import multer from 'multer';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,8 +15,17 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Allow all origins — works for every device/browser including mobile on other networks
+app.use(cors({
+  origin: true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+app.options('*', cors()); // Handle pre-flight for all routes
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // Some devices send form data URL-encoded
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // ── Health check ──────────────────────────────────────────────────────────────
@@ -191,6 +201,30 @@ Object.entries(ADMIN_ROUTES).forEach(([route, table]) => {
       res.status(500).json({ success: false, message: `Failed to delete from ${table}.`, error: error.message });
     }
   });
+});
+
+// ── Multer error handler ──────────────────────────────────────────────────────
+// Multer errors (LIMIT_FILE_SIZE, LIMIT_UNEXPECTED_FILE, etc.) bypass the
+// route try/catch and go straight to Express error middleware. Without this,
+// all devices except the developer's own machine see a raw 500 with no JSON
+// body — which is why "Something went wrong" appears on other devices.
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
+  if (err instanceof multer.MulterError) {
+    let message = 'File upload error.';
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      message = `File is too large. Maximum allowed size is 10 MB.`;
+    } else if (err.code === 'LIMIT_FILE_COUNT') {
+      message = 'Too many files uploaded.';
+    } else if (err.code === 'LIMIT_UNEXPECTED_FILE') {
+      message = `Unexpected file field: "${err.field}". Please refresh and try again.`;
+    }
+    console.error('❌ Multer error:', err.code, err.message);
+    return res.status(400).json({ success: false, message });
+  }
+  // Generic server errors
+  console.error('❌ Unhandled error:', err.message);
+  res.status(500).json({ success: false, message: err.message || 'Internal server error.' });
 });
 
 // ── Serve the built frontend (same origin as the API) ────────────────────────
