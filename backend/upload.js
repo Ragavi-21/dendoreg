@@ -1,4 +1,5 @@
 import multer from 'multer';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,8 +13,14 @@ function sanitizeOriginalName(originalName) {
 }
 
 function createUploader(subfolder) {
+  const dest = path.join(__dirname, 'uploads', subfolder);
+
   const storage = multer.diskStorage({
-    destination: path.join(__dirname, 'uploads', subfolder),
+    destination(req, file, callback) {
+      // Auto-create the folder on any server so uploads never crash with ENOENT
+      fs.mkdirSync(dest, { recursive: true });
+      callback(null, dest);
+    },
     filename(req, file, callback) {
       callback(null, `${Date.now()}-${sanitizeOriginalName(file.originalname)}`);
     },
