@@ -196,6 +196,7 @@ function VendorRegistration() {
                   files={form.shopLogo}
                   onChange={(files) => set('shopLogo', files)}
                   maxFiles={5}
+                  maxSizeMB={1}
                   accept="image/*"
                 />
 
@@ -204,8 +205,9 @@ function VendorRegistration() {
                   files={form.shopBanner}
                   onChange={(files) => set('shopBanner', files)}
                   maxFiles={5}
+                  maxSizeMB={1}
                   accept="image/*"
-                />
+                />7D  
               </WizardStep>
             )}
 
@@ -264,6 +266,7 @@ function VendorRegistration() {
                   files={form.menuFiles}
                   onChange={(files) => set('menuFiles', files)}
                   maxFiles={5}
+                  maxSizeMB={1}
                   accept="image/*,.pdf"
                 />
 
@@ -300,6 +303,7 @@ function VendorRegistration() {
                   files={form.gstCertificate}
                   onChange={(files) => set('gstCertificate', files)}
                   maxFiles={5}
+                  maxSizeMB={1}
                   accept="image/*,.pdf"
                 />
 
@@ -323,6 +327,7 @@ function VendorRegistration() {
                   files={form.fssaiCertificate}
                   onChange={(files) => set('fssaiCertificate', files)}
                   maxFiles={1}
+                  maxSizeMB={1}
                   accept="image/*,.pdf"
                 />
               </WizardStep>
