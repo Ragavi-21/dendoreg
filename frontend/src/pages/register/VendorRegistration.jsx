@@ -207,7 +207,7 @@ function VendorRegistration() {
                   maxFiles={5}
                   maxSizeMB={1}
                   accept="image/*"
-                />7D  
+                /> 
               </WizardStep>
             )}
 
