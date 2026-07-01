@@ -13,7 +13,7 @@ async function submitFormData(endpoint, formData) {
   if (!response.ok) {
     // Give a specific, helpful message for each common status code
     if (response.status === 413) {
-      throw new Error('File too large. Please upload files smaller than 1 MB each.')
+      throw new Error('File too large. Please upload files smaller than 5 MB each.')
     }
     if (response.status === 502 || response.status === 503 || response.status === 504) {
       throw new Error('Server is temporarily unavailable. Please try again in a moment.')
