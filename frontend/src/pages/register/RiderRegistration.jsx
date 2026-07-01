@@ -183,7 +183,7 @@ function RiderRegistration() {
                   files={form.profilePicture}
                   onChange={(files) => set('profilePicture', files)}
                   maxFiles={1}
-                  maxSizeMB={1}
+                  maxSizeMB={5}
                   accept="image/*"
                 />
 
@@ -287,7 +287,7 @@ function RiderRegistration() {
                   files={form.idProofFile}
                   onChange={(files) => set('idProofFile', files)}
                   maxFiles={1}
-                  maxSizeMB={1}
+                  maxSizeMB={5}
                   accept="image/*,.pdf"
                 />
 
@@ -304,7 +304,7 @@ function RiderRegistration() {
                   files={form.drivingLicenseFile}
                   onChange={(files) => set('drivingLicenseFile', files)}
                   maxFiles={1}
-                  maxSizeMB={1}
+                  maxSizeMB={5}
                   accept="image/*,.pdf"
                 />
               </WizardStep>

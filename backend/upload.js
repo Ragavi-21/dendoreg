@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const MAX_FILE_SIZE_BYTES = 1 * 1024 * 1024; // mirrors FileUploadField's default maxSizeMB on the frontend
+const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024; // mirrors FileUploadField's default maxSizeMB on the frontend
 
 function sanitizeOriginalName(originalName) {
   return originalName.replace(/[^a-zA-Z0-9.\-_]/g, '_');

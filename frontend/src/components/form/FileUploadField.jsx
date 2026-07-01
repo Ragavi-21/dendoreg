@@ -3,7 +3,7 @@ import { slugify } from './slugify.js'
 import './Field.css'
 import './FileUploadField.css'
 
-function FileUploadField({ label, required, hint, files, onChange, maxFiles = 1, maxSizeMB = 1, accept }) {
+function FileUploadField({ label, required, hint, files, onChange, maxFiles = 1, maxSizeMB = 5, accept }) {
   const inputId = slugify(label)
   const [error, setError] = useState('')
 
